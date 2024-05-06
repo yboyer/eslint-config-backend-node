@@ -1,6 +1,6 @@
 {
   "name": "@yboyer/eslint-config-backend-node",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "",
   "homepage": "https://github.com/yboyer/eslint-config-backend-node",
   "repository": "git@github.com:yboyer/eslint-config-backend-node.git",
