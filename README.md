@@ -3,6 +3,7 @@
 ## Use the rules in your project
 
 1. On your project :
+   - Uninstall all the ESLint rules packages
    - `npm uninstall prettier eslint`
    - `npm install @yboyer/eslint-config-backend-node`
    - Add prettier line on the package.json
