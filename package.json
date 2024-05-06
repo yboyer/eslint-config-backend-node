@@ -15,8 +15,7 @@
     "lint": "eslint . --cache --fix --ext js,ts",
     "test": "jest",
     "coverage": "jest --coverage",
-    "prepublishOnly": "npm run build",
-    "postversion": "npm publish"
+    "prepublishOnly": "npm run build"
   },
   "keywords": [],
   "devDependencies": {
