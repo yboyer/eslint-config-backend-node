@@ -3,7 +3,10 @@
   "version": "0.0.12",
   "description": "",
   "homepage": "https://github.com/yboyer/eslint-config-backend-node",
-  "repository": "git@github.com:yboyer/eslint-config-backend-node.git",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:yboyer/eslint-config-backend-node.git"
+  },
   "license": "MIT",
   "main": "./lib/index.js",
   "files": [
