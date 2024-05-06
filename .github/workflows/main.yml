@@ -1,0 +1,30 @@
+name: Build and deploy
+
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    if: "startsWith(github.event.head_commit.message, ':bookmark: v')"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm ci
+      - run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      - name: ⚙️ Generate release infos
+        id: release
+        run: |
+          echo "release_tag=$(echo ${{ github.event.head_commit.message }} | grep -o 'v\(.*\)')" >> $GITHUB_OUTPUT
+      - name: 🔖 Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.release.outputs.release_tag }}
+          name: ${{ steps.release.outputs.release_tag }}
