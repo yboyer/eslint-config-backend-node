@@ -1,11 +1,11 @@
-import { ESLint, Linter } from 'eslint'
-import _ from 'lodash'
-// eslint-disable-next-line import/no-unresolved
+// eslint-disable-next-line import/no-unresolved -- ok
 import { rules as tsRules } from '@typescript-eslint/eslint-plugin'
+import { ESLint, Linter } from 'eslint'
 // @ts-expect-error - ok
 import { rules as importRules } from 'eslint-plugin-import'
 // @ts-expect-error - ok
 import { rules as jestRules } from 'eslint-plugin-jest'
+import _ from 'lodash'
 
 describe('ESLint rules', () => {
   it.each(['js', 'ts', 'test.js', 'test.ts', 'e2e.js', 'e2e.ts'])(
@@ -17,21 +17,20 @@ describe('ESLint rules', () => {
         {
           parser: expect.stringMatching('node_modules/@typescript-eslint/parser/dist/index.js'),
         },
-        'Applied rules'
+        'Applied rules',
       )
       const rulesList = [
         Array.from(new Linter().getRules().keys()),
         Object.keys(tsRules).map(r => `@typescript-eslint/${r}`),
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+
         Object.keys(importRules).map(r => `import/${r}`),
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+
         Object.keys(jestRules).map(r => `jest/${r}`),
       ].flat(1)
 
-      expect(
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument, @typescript-eslint/no-unsafe-member-access
-        _.difference(rulesList, Object.keys(fileConfig.rules!))
-      ).toMatchSnapshot('Ignored rules')
-    }
+      expect(_.difference(rulesList, Object.keys(fileConfig.rules))).toMatchSnapshot(
+        'Ignored rules',
+      )
+    },
   )
 })
