@@ -11,7 +11,8 @@
   "main": "./lib/index.js",
   "files": [
     "lib",
-    "prettierrc.json"
+    "prettierrc.json",
+    "tsconfig.json"
   ],
   "scripts": {
     "build": "tsc",
