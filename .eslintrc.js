@@ -50,7 +50,7 @@ module.exports = {
       },
     ],
     'no-await-in-loop': 'off',
-    'prettier/prettier': ['error', require('./prettier.config.js')],
+    'prettier/prettier': ['error', require('./prettierrc.json')],
     'no-plusplus': 'off',
     'simple-import-sort/exports': 'error',
     'simple-import-sort/imports': [
