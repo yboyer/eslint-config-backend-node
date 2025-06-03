@@ -79,6 +79,9 @@ exports[`ESLint rules should match defined rules for js: Applied rules 1`] = `
         "before": false,
       },
     ],
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+    ],
     "@typescript-eslint/default-param-last": [
       "error",
     ],
@@ -180,23 +183,12 @@ exports[`ESLint rules should match defined rules for js: Applied rules 1`] = `
       {
         "format": [
           "camelCase",
-          "PascalCase",
-          "UPPER_CASE",
         ],
-        "selector": "variable",
-      },
-      {
-        "format": [
-          "camelCase",
-          "PascalCase",
+        "leadingUnderscore": "allow",
+        "modifiers": [
+          "private",
         ],
-        "selector": "function",
-      },
-      {
-        "format": [
-          "PascalCase",
-        ],
-        "selector": "typeLike",
+        "selector": "memberLike",
       },
     ],
     "@typescript-eslint/no-array-constructor": [
@@ -237,6 +229,9 @@ exports[`ESLint rules should match defined rules for js: Applied rules 1`] = `
     ],
     "@typescript-eslint/no-extra-semi": [
       "off",
+    ],
+    "@typescript-eslint/no-floating-promises": [
+      "error",
     ],
     "@typescript-eslint/no-implied-eval": [
       "error",
@@ -755,6 +750,7 @@ exports[`ESLint rules should match defined rules for js: Applied rules 1`] = `
       "error",
       {
         "allowUnsafeDynamicCyclicDependency": false,
+        "disableScc": false,
         "ignoreExternal": false,
         "maxDepth": "∞",
       },
@@ -902,6 +898,7 @@ exports[`ESLint rules should match defined rules for js: Applied rules 1`] = `
             "internal",
           ],
         ],
+        "named": false,
         "warnOnUnassignedImports": false,
       },
     ],
@@ -1925,6 +1922,9 @@ exports[`ESLint rules should match defined rules for js: Applied rules 1`] = `
     ],
     "no-void": [
       "error",
+      {
+        "allowAsStatement": true,
+      },
     ],
     "no-warning-comments": [
       "off",
@@ -2551,6 +2551,8 @@ exports[`ESLint rules should match defined rules for js: Applied rules 1`] = `
       ".tsx",
       ".js",
       ".jsx",
+      ".mjs",
+      ".cjs",
     ],
     "import/external-module-folders": [
       "node_modules",
@@ -2577,6 +2579,8 @@ exports[`ESLint rules should match defined rules for js: Applied rules 1`] = `
           ".tsx",
           ".js",
           ".jsx",
+          ".mjs",
+          ".cjs",
         ],
       },
     },
@@ -2604,7 +2608,6 @@ exports[`ESLint rules should match defined rules for js: Ignored rules 1`] = `
   "@typescript-eslint/consistent-type-assertions",
   "@typescript-eslint/consistent-type-definitions",
   "@typescript-eslint/consistent-type-exports",
-  "@typescript-eslint/consistent-type-imports",
   "@typescript-eslint/explicit-function-return-type",
   "@typescript-eslint/explicit-member-accessibility",
   "@typescript-eslint/explicit-module-boundary-types",
@@ -2620,7 +2623,6 @@ exports[`ESLint rules should match defined rules for js: Ignored rules 1`] = `
   "@typescript-eslint/no-dynamic-delete",
   "@typescript-eslint/no-empty-interface",
   "@typescript-eslint/no-extraneous-class",
-  "@typescript-eslint/no-floating-promises",
   "@typescript-eslint/no-for-in-array",
   "@typescript-eslint/no-import-type-side-effects",
   "@typescript-eslint/no-inferrable-types",
@@ -2693,6 +2695,14 @@ exports[`ESLint rules should match defined rules for js: Ignored rules 1`] = `
   "jest/no-restricted-matchers",
   "jest/no-test-return-statement",
   "jest/no-untyped-mock-factory",
+  "jest/padding-around-after-all-blocks",
+  "jest/padding-around-after-each-blocks",
+  "jest/padding-around-all",
+  "jest/padding-around-before-all-blocks",
+  "jest/padding-around-before-each-blocks",
+  "jest/padding-around-describe-blocks",
+  "jest/padding-around-expect-groups",
+  "jest/padding-around-test-blocks",
   "jest/prefer-called-with",
   "jest/prefer-comparison-matcher",
   "jest/prefer-each",

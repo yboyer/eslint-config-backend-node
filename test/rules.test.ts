@@ -3,7 +3,6 @@ import { rules as tsRules } from '@typescript-eslint/eslint-plugin'
 import { ESLint, Linter } from 'eslint'
 // @ts-expect-error - ok
 import { rules as importRules } from 'eslint-plugin-import'
-// @ts-expect-error - ok
 import { rules as jestRules } from 'eslint-plugin-jest'
 import _ from 'lodash'
 

@@ -1,6 +1,6 @@
 {
   "name": "@yboyer/eslint-config-backend-node",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "description": "",
   "homepage": "https://github.com/yboyer/eslint-config-backend-node",
   "repository": {
@@ -22,8 +22,7 @@
   },
   "keywords": [],
   "devDependencies": {
-    "@tsconfig/node20": "^20.1.5",
-    "@types/eslint": "^9.6.1",
+    "@tsconfig/node22": "^22.0.2",
     "@types/jest": "^29.5.14",
     "@types/lodash": "^4.17.17",
     "@types/node": "^22.13.8",
