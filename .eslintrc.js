@@ -52,6 +52,7 @@ module.exports = {
     'no-await-in-loop': 'off',
     'prettier/prettier': ['error', require('./prettierrc.json')],
     'no-plusplus': 'off',
+    'no-continue': 'off',
     'simple-import-sort/exports': 'error',
     'simple-import-sort/imports': [
       'error',
