@@ -6,11 +6,6 @@
    - Uninstall all the ESLint rules packages
    - `npm uninstall prettier eslint`
    - `npm install @yboyer/eslint-config-backend-node`
-   - Add prettier line on the package.json
-
-      ```json
-      "prettier": "@yboyer/eslint-config-backend-node/prettierrc.json"
-      ```
 
 2. Replace the .eslintrc file by :
 
