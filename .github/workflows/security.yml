@@ -10,4 +10,4 @@ on:
 
 jobs:
   trivy:
-    uses: yboyer/ci-templates/.github/workflows/trivy.yml
+    uses: yboyer/ci-templates/.github/workflows/trivy.yml@master
