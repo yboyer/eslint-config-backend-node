@@ -44,4 +44,5 @@ jobs:
           git push origin "$BRANCH"
           gh pr create \
             --head "$BRANCH" \
-            --title "chore(release): v${VERSION}"
+            --title "chore(release): v${VERSION}" \
+            --body "Prepare release v${VERSION}."
