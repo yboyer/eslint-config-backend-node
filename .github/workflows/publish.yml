@@ -7,7 +7,7 @@ on:
   workflow_call:
     inputs:
       tag:
-        description: "Tag à publier"
+        description: "Tag to publish"
         required: false
         type: string
 
