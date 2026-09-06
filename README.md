@@ -1,22 +1,24 @@
 # @yboyer/config
 
-> Configurations Biome et Typescript partagées pour les projets JS/TS.
+> Shared Biome and TypeScript configurations for JS/TS projects.
 
-## Utilisation
+## Usage
 
 ### 1. Installation
 
-Installer le paquet en tant que dépendance de développement :
+Install Biome and the configuration as development dependencies:
 
 ```sh
-npm i -D @yboyer/config
+npm i -D @biomejs/biome@^2.5.12 @yboyer/config
 ```
+
+`@yboyer/config` declares Biome as a peer dependency and supports Biome `^2.5.12`.
 
 ### 2. Configuration
 
 #### Biome
 
-Créer un fichier `biome.json` à la racine du projet avec le contenu suivant pour hériter de la configuration :
+Create a `biome.json` file at the project root with the following content to extend the shared configuration:
 
 ```json
 {
@@ -27,7 +29,7 @@ Créer un fichier `biome.json` à la racine du projet avec le contenu suivant po
 
 #### TypeScript
 
-Étendre le tsconfig.json avec le fichier de configuration partagé :
+Extend `tsconfig.json` with the shared configuration file:
 
 ```json
 {
@@ -44,21 +46,21 @@ Créer un fichier `biome.json` à la racine du projet avec le contenu suivant po
 }
 ```
 
-### 3. Commandes
+### 3. Commands
 
-Pour vérifier la conformité du code :
+To check code conformance:
 
 ```sh
 npx biome check .
 ```
 
-Pour appliquer les correctifs automatiques (formatage et imports) :
+To apply automatic fixes (formatting and imports):
 
 ```sh
 npx biome check --apply .
 ```
 
-## Elements causing errors
+## Items that cause errors
 
 ### Rules
 
