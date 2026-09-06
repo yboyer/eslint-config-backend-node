@@ -5,7 +5,7 @@
   "homepage": "https://github.com/yboyer/config",
   "repository": {
     "type": "git",
-    "url": "git@github.com:yboyer/config.git"
+    "url": "git+ssh://git@github.com/yboyer/config.git"
   },
   "license": "MIT",
   "files": [
